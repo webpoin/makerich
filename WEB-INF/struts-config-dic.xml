@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="DiCForm"
+			type="org.apache.struts.validator.DynaValidatorForm">
+			<form-property name="sigen" type="java.lang.String" />
+			<form-property name="phone" type="java.lang.String" />
+			<form-property name="type" type="java.lang.String" />
+			<form-property name="province" type="java.lang.String" />
+			<form-property name="city" type="java.lang.String" />
+			<form-property name="county" type="java.lang.String" />
+			<form-property name="realname" type="java.lang.String" />
+			<form-property name="address" type="java.lang.String" />
+			<form-property name="password" type="java.lang.String" />
+			<form-property name="code" type="java.lang.String" />
+		</form-bean>
+	</form-beans>
+
+	<action-mappings>
+		<action path="/dic"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			name="DiCForm" parameter="method" scope="request" validate="false">
+			<forward name="to_register" path="/common/register.jsp" />
+			<forward name="login_fail" path="/common/login.jsp" />
+			<forward name="login_success" path="/common/register.jsp"/>
+		 	<forward name="to_cf_index" path="/cloud/index.jsp" />
+			<forward name="login_success" path="/common/branch.jsp"/>
+			
+		 	<forward name="cf_user_index" path="/cloud/index.jsp" />
+		 	<forward name="cf_user_month" path="/cloud/user_month.jsp" />
+		 	<forward name="cf_user_account" path="/cloud/user_account.jsp" />
+		 	<forward name="cf_user_projects" path="/cloud/user_projects.jsp" />
+		 	<forward name="cf_personal_detail" path="/cloud/cf_personal_detail.jsp" />
+		 	<forward name="cf_company_detail" path="/cloud/cf_company_detail.jsp" />
+		 	<forward name="cf_admin_index" path="/cloud/admin.jsp" />
+		 	<forward name="cf_admin_daily" path="/cloud/admin_daily.jsp" />
+		 	<forward name="cf_admin_upgrade" path="/cloud/admin_upgrade.jsp" />
+		 	<forward name="cf_admin_join_fundation" path="/cloud/admin_join_fundation.jsp" />
+		 	<forward name="cf_admin_join_agency" path="/cloud/admin_join_agency.jsp" />
+		 	<forward name="cf_admin_area" path="/cloud/admin_area.jsp" />
+		 	<forward name="cf_admin_base" path="/cloud/admin_base.jsp" />
+		 	<forward name="cf_admin_company_details" path="/cloud/admin_company_detail.jsp" />
+		 	<forward name="cf_admin_personal_details" path="/cloud/admin_personal_detail.jsp" />
+		 	
+		 	<forward name="cf_admin_base_business" path="/cloud/admin_base_business.jsp" />
+		 	<forward name="cf_admin_base_details" path="/cloud/admin_base_detail.jsp" />
+		 	<forward name="cf_admin_base_info" path="/cloud/admin_base_info.jsp" />
+		 	<forward name="cf_admin_base_edit" path="/cloud/admin_base_edit.jsp" />
+		 	
+		 	
+		 	<forward name="cf_admin_area_business" path="/cloud/admin_area_business.jsp" />
+		 	<forward name="cf_admin_area_details" path="/cloud/admin_area_detail.jsp" />
+		 	<forward name="cf_admin_area_info" path="/cloud/admin_area_info.jsp" />
+		 	<forward name="cf_admin_area_edit" path="/cloud/admin_area_edit.jsp" />
+		 	
+		</action>		
+
+
+	</action-mappings>
+
+</struts-config>

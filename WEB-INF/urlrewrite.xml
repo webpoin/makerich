@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 3.2//EN"
+        "http://tuckey.org/res/dtds/urlrewrite3.2.dtd">        
+<urlrewrite>
+
+	<!-- 用户去登录页面 -->
+	<rule>
+   		<from>^/index.shtml$</from>
+   		<to>/dic.do?method=index</to>
+	</rule>
+
+	<!-- 用户去登录页面 -->
+	<rule>
+   		<from>^/to_login.shtml$</from>
+   		<to>/dic.do?method=toLogin</to>
+	</rule>
+
+	<!-- 用户登录 -->
+	<rule>
+   		<from>^/user_login.shtml$</from>
+   		<to>/dic.do?method=UserLogin</to>
+	</rule>
+	
+	<!-- 发送短信 -->
+	<rule>
+   		<from>^/send_message.shtml$</from>
+   		<to>/dic.do?method=sendMessage</to>
+	</rule>
+	
+	<!-- 用户退出登录 -->
+	<rule>
+   		<from>^/user_logout.shtml$</from>
+   		<to>/dic.do?method=UserLogout</to>
+	</rule>
+	
+	<!-- 用户修改登录密码 -->
+	<rule>
+   		<from>^/cf_user_reset_password.shtml$</from>
+   		<to>/dic.do?method=cfUserRestPassword</to>
+	</rule>
+	
+	
+	
+	<!-- 去注册页面 -->
+	<rule>
+   		<from>^/to_register.shtml$</from>
+   		<to>/dic.do?method=toRegister</to>
+	</rule>
+	
+	<!-- 注册时检测账号是否可用 -->
+	<rule>
+   		<from>^/check_phone_register.shtml$</from>
+   		<to>/dic.do?method=checkPhoneRegister</to>
+	</rule>
+	
+	<!-- 注册入库 -->
+	<rule>
+   		<from>^/registered.shtml$</from>
+   		<to>/dic.do?method=registered</to>
+	</rule>
+
+	<!-- 创富系统后台管理首页 -->
+	<rule>
+   		<from>^/cf_admin_index.shtml$</from>
+   		<to>/dic.do?method=cfAdminIndex</to>
+	</rule>
+	
+	<!-- 创富系统后台管理基础运营商 -->
+	<rule>
+   		<from>^/cf_admin_base.shtml$</from>
+   		<to>/dic.do?method=cfAdminBase</to>
+	</rule>
+	
+	<!-- 创富系统后台管理基础运营商(查询其业绩总数据) -->
+	<rule>
+   		<from>^/cf_admin_personal_tgtotal.shtml$</from>
+   		<to>/dic.do?method=cfAdminPersonalTgtotal</to>
+	</rule>
+	
+	<!-- 创富系统后台管理基础运营商(查询其业绩列表) -->
+	<rule>
+   		<from>^/cf_admin_personal_tglist.shtml$</from>
+   		<to>/dic.do?method=cfAdminPersonalTglist</to>
+	</rule>
+	
+	<!-- 创富系统后台管理基础运营商(查询其详情信息) -->
+	<rule>
+   		<from>^/cf_admin_personal_message.shtml$</from>
+   		<to>/dic.do?method=cfAdminPersonalMessage</to>
+	</rule>
+	
+	<!-- 创富系统后台管理基础运营商(查询其详情信息并准备修改申请信息) -->
+	<rule>
+   		<from>^/cf_admin_personal_update.shtml$</from>
+   		<to>/dic.do?method=cfAdminPersonalUpdate</to>
+	</rule>
+	
+	<!-- 创富系统后台管理基础运营商(查询其详情信息并准备修改申请信息具体实现) -->
+	<rule>
+   		<from>^/cf_admin_person_message_update.shtml$</from>
+   		<to>/dic.do?method=cfAdminPersonalMessageUpdate</to>
+	</rule>
+	
+	
+	<!-- 创富系统后台管理区域代理(查询其业绩总数据) -->
+	<rule>
+   		<from>^/cf_admin_company_tgtotal.shtml$</from>
+   		<to>/dic.do?method=cfAdminCompanyTgtotal</to>
+	</rule>
+	
+	<!-- 创富系统后台管理区域代理(查询其业绩列表) -->
+	<rule>
+   		<from>^/cf_admin_company_tglist.shtml$</from>
+   		<to>/dic.do?method=cfAdminCompanyTglist</to>
+	</rule>
+	
+	<!-- 创富系统后台管理区域代理(查询其详情信息) -->
+	<rule>
+   		<from>^/cf_admin_company_message.shtml$</from>
+   		<to>/dic.do?method=cfAdminCompanyMessage</to>
+	</rule>
+	
+	<!-- 创富系统后台管理区域代理(查询其详情信息并准备修改申请信息) -->
+	<rule>
+   		<from>^/cf_admin_company_update.shtml$</from>
+   		<to>/dic.do?method=cfAdminCompanyUpdate</to>
+	</rule>
+	
+	<!-- 创富系统后台管理区域代理(查询其详情信息并准备修改申请信息具体实现) -->
+	<rule>
+   		<from>^/cf_admin_company_message_update.shtml$</from>
+   		<to>/dic.do?method=cfAdminCompanyMessageUpdate</to>
+	</rule>
+	
+	<!-- 创富系统后台管理区域代理商 -->
+	<rule>
+   		<from>^/cf_admin_area.shtml$</from>
+   		<to>/dic.do?method=cfAdminArea</to>
+	</rule>
+	
+	<!-- 创富系统后台管理申请记录基础运营商 -->
+	<rule>
+   		<from>^/cf_admin_join_fundation.shtml$</from>
+   		<to>/dic.do?method=cfAdminJoinFundation</to>
+	</rule>
+	
+	<!-- 创富系统后台管理审核基础运营商(通过) -->
+	<rule>
+   		<from>^/cf_admin_pass_fundation.shtml$</from>
+   		<to>/dic.do?method=cfAdminPassFundation</to>
+	</rule>
+	
+	
+	<!-- 创富系统后台管理审核基础运营商(查询详情) -->
+	<rule>
+   		<from>^/cf_admin_details_fundation.shtml$</from>
+   		<to>/dic.do?method=cfAdminDetailsFundation</to>
+	</rule>
+	
+	
+	
+	
+	<!-- 创富系统后台管理申请记录基础运营商 -->
+	<rule>
+   		<from>^/cf_admin_join_agency.shtml$</from>
+   		<to>/dic.do?method=cfAdminJoinAgency</to>
+	</rule>
+	
+	<!-- 创富系统后台管理审核区域代理 -->
+	<rule>
+   		<from>^/cf_addmin_pass_agency.shtml$</from>
+   		<to>/dic.do?method=cfAdminPassAgency</to>
+	</rule>
+	
+	<!-- 创富系统后台管理审核区域代理(查询详情) -->
+	<rule>
+   		<from>^/cf_admin_details_Agency.shtml$</from>
+   		<to>/dic.do?method=cfAdminDetailsAgency</to>
+	</rule>
+	
+	<!-- 创富系统后台管理升级申请 -->
+	<rule>
+   		<from>^/cf_admin_upgrade.shtml$</from>
+   		<to>/dic.do?method=cfAdminUpgrade</to>
+	</rule>
+	
+	<!-- 创富系统后台管理操作记录 -->
+	<rule>
+   		<from>^/cf_admin_daily.shtml$</from>
+   		<to>/dic.do?method=cfAdminDaily</to>
+	</rule>
+	
+	<!-- 创富系统首页 -->
+	<rule>
+   		<from>^/cf_user_index.shtml$</from>
+   		<to>/dic.do?method=cfUserIndex</to>
+	</rule>
+	
+	<!-- 创富系统的用户月度收益 -->
+	<rule>
+   		<from>^/cf_user_month.shtml$</from>
+   		<to>/dic.do?method=cfUserMonth</to>
+	</rule>
+	
+	<!-- 创富系统的用户收账明细 -->
+	<rule>
+   		<from>^/cf_user_account.shtml$</from>
+   		<to>/dic.do?method=cfUserAccount</to>
+	</rule>
+	
+	<!-- 创富系统的用户获得项目-->
+	<rule>
+   		<from>^/cf_user_projects.shtml$</from>
+   		<to>/dic.do?method=cfUserProjects</to>
+	</rule>
+	
+	<!-- 创富系统的个人用户详情信息-->
+	<rule>
+   		<from>^/cf_personal_info.shtml$</from>
+   		<to>/dic.do?method=cfPersonalInfo</to>
+	</rule>
+	
+	<!-- 创富系统的企业用户详情信息-->
+	<rule>
+   		<from>^/cf_company_info.shtml$</from>
+   		<to>/dic.do?method=cfCompanyInfo</to>
+	</rule>
+	
+	<!-- 企业用户申请区域代理商 -->
+	<rule>
+   		<from>^/user_agency_apply.shtml$</from>
+   		<to>/dic.do?method=userAgencyApply</to>
+	</rule>
+	
+	<!-- 个体用户申请基础运营商 -->
+	<rule>
+   		<from>^/user_fundation_apply.shtml$</from>
+   		<to>/dic.do?method=userFundationApply</to>
+	</rule>
+	
+	
+
+
+	
+	
+	
+	
+	
+	<!-- 四维系统首页-->
+	<rule>
+   		<from>^/sw_user_index.shtml$</from>
+   		<to>/admin.do?method=toIndex</to>
+	</rule>
+	<!-- 四维系统首页-->
+	<rule>
+   		<from>^/to_sw_index.shtml$</from>
+   		<to>/admin.do?method=toIndex</to>
+	</rule>
+	<!-- 四维系统去申请加盟-->
+	<rule>
+   		<from>^/sw_user_to_apply.shtml$</from>
+   		<to>/admin.do?method=toApply</to>
+	</rule>
+	<!-- 四维系统申请加盟-->
+	<rule>
+   		<from>^/sw_user_apply.shtml$</from>
+   		<to>/admin.do?method=apply</to>
+	</rule>
+	<!-- 四维系统查询用户信息 -->
+	<rule>
+   		<from>^/get_userinfo_siwei.shtml$</from>
+   		<to>/admin.do?method=getUserInfo</to>
+	</rule>
+	<!-- 四维系统去订单管理-->
+	<rule>
+   		<from>^/sw_to_user_order_manager.shtml$</from>
+   		<to>/admin.do?method=toOrderManager</to>
+	</rule>
+	<!-- 四维系统去产品订购-->
+	<rule>
+   		<from>^/sw_to_user_order_list.shtml$</from>
+   		<to>/admin.do?method=toUserOrderList</to>
+	</rule>
+	<!-- 四维系统支付-->
+	<rule>
+   		<from>^/sw_to_pay.shtml$</from>
+   		<to>/admin.do?method=toPay</to>
+	</rule>
+	<!-- 四维系统去收益详情-->
+	<rule>
+   		<from>^/sw_to_user_profit.shtml$</from>
+   		<to>/admin.do?method=toUserProfit</to>
+	</rule>
+	<!-- 四维系统代理体系-->
+	<rule>
+   		<from>^/sw_to_agency_system.shtml$</from>
+   		<to>/admin.do?method=toAgencySystem</to>
+	</rule>
+	
+	<!-- 四维系统代理体系-->
+	<rule>
+   		<from>^/sw_user_pay_order.shtml$</from>
+   		<to>/admin.do?method=swUserPayOrder</to>
+	</rule>
+	
+	<!-- 四维系统代理体系-->
+	<rule>
+   		<from>^/sw_user_comfirm_deliver.shtml$</from>
+   		<to>/admin.do?method=swUserComfirmDeliver</to>
+	</rule>
+	
+	
+	
+	
+	<!-- 四维系统后台管理首页 -->
+	<rule>
+   		<from>^/sw_admin_index.shtml$</from>
+   		<to>/admin.do?method=swAdminIndex</to>
+	</rule>
+	<!-- 四维系统后台订单管理 -->
+	<rule>
+   		<from>^/sw_admin_order_manager.shtml$</from>
+   		<to>/admin.do?method=swAdminOrderManager</to>
+	</rule>
+	
+	<!-- 四维系统后台订单管理(确认付款) -->
+	<rule>
+   		<from>^/sw_admin_paysuccess.shtml$</from>
+   		<to>/admin.do?method=swAdminPaysuccess</to>
+	</rule>
+	
+	<!-- 四维系统后台订单管理(确认发货) -->
+	<rule>
+   		<from>^/sw_admin_deliver.shtml$</from>
+   		<to>/admin.do?method=swAdminDeliver</to>
+	</rule>
+	
+	
+	<!-- 四维系统后台用户管理 -->
+	<rule>
+   		<from>^/sw_admin_user_manager.shtml$</from>
+   		<to>/admin.do?method=swAdminUserManager</to>
+	</rule>
+	<!-- 四维系统后台加盟申请 -->
+	<rule>
+   		<from>^/sw_admin_join_manager.shtml$</from>
+   		<to>/admin.do?method=swAdminApplay</to>
+	</rule>
+	<!-- 四维系统后台加盟申请通过 -->
+	<rule>
+   		<from>^/sw_addmin_applay_pass.shtml$</from>
+   		<to>/admin.do?method=swAdminApplayPass</to>
+	</rule>
+	<!-- 四维系统后台查看申请通过的用户详情 -->
+	<rule>
+   		<from>^/sw_addmin_applay_detail.shtml$</from>
+   		<to>/admin.do?method=swAdminApplayPassDetail</to>
+	</rule>
+	<!-- 四维系统后台查看销售统计-->
+	<rule>
+   		<from>^/sw_admin_business.shtml$</from>
+   		<to>/admin.do?method=swAdminBusiness</to>
+	</rule>
+	<!-- 四维系统后台查看用户账户信息-->
+	<rule>
+   		<from>^/sw_admin_info.shtml$</from>
+   		<to>/admin.do?method=swAdminInfo</to>
+	</rule>
+	<!-- 四维系统后台去修改户账户信息页面-->
+	<rule>
+   		<from>^/sw_to_admin_edit.shtml$</from>
+   		<to>/admin.do?method=toswAdminEdit</to>
+	</rule>
+	<!-- 四维系统后台修改户账户信息-->
+	<rule>
+   		<from>^/sw_admin_edit.shtml$</from>
+   		<to>/admin.do?method=swAdminEdit</to>
+	</rule>
+</urlrewrite>
+

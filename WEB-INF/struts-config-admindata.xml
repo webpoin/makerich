@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="AdminForm"
+			type="org.apache.struts.validator.DynaValidatorForm">
+			<form-property name="sigen" type="java.lang.String" />
+			<form-property name="phone" type="java.lang.String" />
+			<form-property name="type" type="java.lang.String" />
+			<form-property name="province" type="java.lang.String" />
+			<form-property name="city" type="java.lang.String" />
+			<form-property name="county" type="java.lang.String" />
+			<form-property name="realname" type="java.lang.String" />
+			<form-property name="address" type="java.lang.String" />
+			<form-property name="password" type="java.lang.String" />
+			<form-property name="code" type="java.lang.String" />
+		</form-bean>		
+	</form-beans>
+
+	<action-mappings>		
+		<action path="/admin"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			name="AdminForm" parameter="method" scope="request"
+			validate="false">
+			<forward name="to_register" path="/common/register.jsp" />
+			<forward name="login_fail" path="/common/login.jsp" />
+			<forward name="to_login" path="/common/login.jsp" />
+			<forward name="login_success" path="/common/branch.jsp" />
+			<forward name="to_user_index" path="/siwei/index.jsp" />
+			<forward name="to_user_applay" path="/siwei/user_apply.jsp" />
+			<forward name="user_info" path="/siwei/user_info.jsp" />
+			<forward name="to_user_order_manager" path="/siwei/user_order.jsp" />
+			<forward name="to_user_order_list" path="/siwei/user_list.jsp" />
+			<forward name="to_user_profit" path="/siwei/user_data.jsp" />
+			<forward name="to_agency_system" path="/siwei/user_system.jsp" />
+			
+			
+			
+			
+			
+			
+			<forward name="sw_admin_index" path="/siwei/admin.jsp" />
+		 	<forward name="sw_admin_order_manager" path="/siwei/admin_order.jsp" />
+		 	<forward name="sw_admin_user_manager" path="/siwei/admin_user.jsp" />
+		 	<forward name="sw_admin_applay_manager" path="/siwei/admin_join.jsp" />
+		 	<forward name="sw_admin_applay_detail" path="/siwei/admin_join_detail.jsp" />
+		 	<forward name="sw_admin_business" path="/siwei/admin_business.jsp" />
+		 	<forward name="sw_admin_info" path="/siwei/admin_info.jsp" />
+		 	<forward name="sw_admin_edit" path="/siwei/admin_edit.jsp" />
+		</action>		
+	</action-mappings>
+</struts-config>

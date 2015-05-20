@@ -1,0 +1,18 @@
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+	<form-bean name="mainForm"
+			type="org.apache.struts.validator.DynaValidatorForm">
+		</form-bean>		
+	</form-beans>
+
+	<action-mappings>		
+		<!-- 后台首页 -->
+		<action path="/main"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			name="mainForm" parameter="method" scope="request"
+			validate="false">
+		</action>	
+	</action-mappings>
+
+</struts-config>
